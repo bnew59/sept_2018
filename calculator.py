@@ -1,10 +1,6 @@
 
 
-first_num = int(input("Enter First Number: "))
-operand = (input("Enter Operand: "))
-second_num = int(input("Enter Second Number: "))
 
-result = 0
 
 def add(first_num, second_num):
     return first_num + second_num
@@ -30,7 +26,11 @@ if operand == "*":
 if operand == "/":
     result = divide(first_num, second_num)
 
+first_num = int(input("Enter First Number: "))
+operand = (input("Enter Operand: "))
+second_num = int(input("Enter Second Number: "))
 
+result = 0
 
 print(result)
 
