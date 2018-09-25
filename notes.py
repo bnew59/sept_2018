@@ -329,3 +329,162 @@ while True:
 # not in other handlers of the same try statement. An except clause may name multiple exceptions as a parenthesized tuple, 
 # for example: except (RuntimeError, TypeError, NameError):
 
+9/21 notes
+
+Import commands
+
+import math # imports from the math folder
+#what you are importing needs to be in the same directory (folder) that you are in
+
+
+
+Tuples - lists that cannot be changed. brackets make it a tuple, brackets make it a list
+
+thistuple = ('apple', 'banana', 'orange')
+
+thislist = ['zucchini', 'pepper', 'broccoli']
+
+#you can add, remove etc. from thislist.
+
+
+List vs array
+
+you can perform more math on an array
+
+
+
+9/24 Notes
+
+classes and objects - needed in all languages
+
+class - a blueprint thst allows you to create other things
+Blueprint - basic properties of something I am talking about
+    has a surface
+    material
+    4 legs
+    Cost
+this could become any table
+
+now Blueprint becomes Table
+
+Car blueprint - the class name should always be singular
+These are properties or attributes of the car
+    make
+    Model
+    Color
+
+
+how do we create a BMW from thgis?
+    make = BMW
+    model= 320
+    color = white
+
+using the Car blueprint oe class I created a BMW
+create another class
+
+the properties are,
+    lastname
+    firstname
+    dateofbirth
+    social
+
+the class is Person
+
+
+Actions - things the car can do
+    start the car
+    stop the car
+    turn
+
+create a class now for coding
+
+class Car:
+    def __init__(self): #this is an initializer or constructor. self is an object in the class car
+        self.make = "BMW"  #These are the instances / objects of the "car" class
+        self.model = "Series 3"
+        self.year = "2018"
+        print("initializing a car")
+        print(self)
+
+#creates an object / instance of Car class
+car = Car("Honda", "Accord", "2018")
+
+print(car.make)
+print(car.model)
+print(car.year)
+
+#creating a Car class OBJECT called car
+car = Car("Toyota", "camry", "2018") #This uses Car class to print out the toyota attributes
+print(car.make)
+print(car.model)
+print(car.year)
+
+
+#__init__ is a built in function
+Another way is
+
+class DirvingLicense
+    def __init__(self, firstname, last,name)
+
+
+    #create a class called user with forst and last name
+
+    class User:
+        def __init__(self, first_name, last_name)
+
+user = User("Jphn", "doe")
+print(user)
+
+#Now add capability to have blamk areas to add to
+
+#self is always the object on which the function is called
+class User:
+        def __init__(self, first_name, last_name):
+            self.first_name = first_name
+            self.last_name = last+name
+            self.street = ""
+            self.state = ""
+            self.addresses = []  # creates an array for multiple addresses
+
+
+user = User("Jphn", "doe")
+
+user.street = "2017 Rosewood"
+
+print(user)
+
+
+
+
+class Battery:
+    def __init__(self, life, manufacturer):
+        self.life = life
+        self.manufacturer = manufacturer
+
+class ElectricCar:
+    def __init__(self,make,model):
+        self.make = make
+        self.model = model
+        self. battery = Battery
+
+    def print_funct(self):
+        print("Make" = {0}, Model = {1}, Battery = {2})
+
+battery = Battery(100, "CC")
+
+car = ElectricCar("Tesla", "Model X", battery)
+
+print
+
+
+
+class Task:
+    def __init__(self, title, priority):
+        sefl.title = titleself.priority = priority
+
+task = Task("Wash the car", High)
+
+task2 = ...
+
+tasks = [] # crete aqn array
+

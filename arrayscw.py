@@ -1,5 +1,5 @@
 
-name = "John"
+
 
 random_items = ["Alex",23,True,"Mary",12.34]
 names = ["Alex","Mary","John","Steve","Kate","Paul","Bryan"]
@@ -24,7 +24,7 @@ del names[1]
 #loop
 # for loop
 
-for index in range(0, len(names),1):
+for index in range(0, len(names)):
     print(names[index])
 
 # running loop in reverse order
