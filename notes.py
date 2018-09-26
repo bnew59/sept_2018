@@ -488,3 +488,29 @@ task2 = ...
 
 tasks = [] # crete aqn array
 
+9/25 notes
+
+#class exercise
+
+class Student:
+    def __init__(self, firstname, lastname, studentID)
+        self.firstname = firstname
+        self.lastname = lastname
+        self.id = studentID
+student1=Student("john","doe","123")
+print(student1)
+
+class Course:
+    def __init__(self, name, courseNum, prereqs):
+        self.name = name
+        self.courseNum = courseNum
+        self.prereqs = prereqs
+
+    def list_all_prereqs(self):
+        for course in self.prereqs:
+            print(course)
+
+#create an array for prereqs below
+calculus1 = Course("Calculus1", "3012")
+    course = Course("math", "123", [calculus1]):
+
