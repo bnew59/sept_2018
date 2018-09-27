@@ -514,3 +514,139 @@ class Course:
 calculus1 = Course("Calculus1", "3012")
     course = Course("math", "123", [calculus1]):
 
+
+
+
+
+9-26 notes 9/26
+
+#creating and writing text to a file
+file_object = open("todo.txt","w") #"w" means to open the file in write mode. it also creates the file
+
+#write to the file todo.txt
+file_object.write("Hello World")
+
+#close the file
+file_object.close()
+
+or
+
+with open("todo.txt","w") as file_object: #This approach automatically closes the file
+    file_object.write("Hello World")
+
+#REading from teh file
+with open("todo.txt", "r") as file_object:
+    print(file_object.read())
+
+#reading line by line
+task_name = input ("Enter task name ")
+with open("todo.txt", "a") as file_object:
+    file_object.write(task_name)
+
+tasks = []
+with open("todo.txt", "r") as file_object:
+    lines = file_object.readlines()
+    for line in lines:
+
+    print(lines)
+
+#importing json modules
+import json
+data = {
+    "name" : "john doe"
+}
+
+#Notes from Azams file
+
+# importing json module because we have to use the functions associate with reading and writing json to a file
+import json
+
+class Task:
+    def __init__(self,name,priority):
+        self.name = name
+        self.priority = priority
+
+    def asDictionary(self):
+        return self.__dict__
+
+data = {
+    "name" : "john doe"
+}
+
+task = Task("Wash the car",10)
+
+tasks = [task.__dict__]
+
+
+# task_as_a_dictionary = {"name": task.name, "priority": task.priority}
+
+# json.dump can write the following types to a files
+# Int, String, Boolean, Dictionary, Array
+# Array of Dictionaries
+
+# writing a custom object to a json file
+with open("tasks.json","w") as file_object:
+    json.dump(task.asDictionary(),file_object)
+
+# writing data to a json file
+#with open("tasks.json","w") as file_object:
+#    json.dump(data,file_object)
+
+# reading data from a json file
+#with open("tasks.json","r") as file_object:
+#    task_data = json.load(file_object)
+#    print(task_data)
+
+
+#More from Azam
+
+task_name = input("Enter task name: ")
+task_priority = input("Enter task priority: ")
+
+with open("todo.txt","a") as file_object:
+    file_object.write(task_name)
+    file_object.write(task_priority)
+    # write an empty new line
+    # \n is the code for new line
+    file_object.write("\n")
+
+tasks = []
+
+class Task:
+    def __init__(self,name):
+        self.name = name
+
+# reading file line by line
+with open("todo.txt","r") as file_object:
+    lines = file_object.readlines()
+    for line in lines:
+        task = Task(line)
+        tasks.append(task)
+
+
+
+9/27 notes 9-27
+
+Unit testing
+
+TDD - Test Driven Development
+
+code for testing in py of a calculator app
+
+import unittest #A py file
+#Must inherit from TestCase
+#This represents a Unit Test Case
+def setUp(self):
+    print("SETUP")
+
+class TestCalculator(unittest.TestCase):
+#names for testing shoudl start with test keyword
+    def test_add_two_numbers():
+        calculator = Calculator()
+        result = calculator.add(4,5)
+        self.assertEqual(1,4) #asserts that this is = rhs
+
+unittest.main() #used to run the test
+
+def tearDown(self):
+    print("TEARDOWN")
